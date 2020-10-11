@@ -15,11 +15,11 @@ public class Main {
     private static final String DESTINATION_FOLDER="pdf병합/";
     public static void main(String[] args) {
 
-
-        File imgDir = new File(""); // 현재폴더
+        String path = args[0];
+        File imgDir = new File(path+"/"); // 현재폴더
         File[] imgFiles = imgDir.listFiles();
         List<List<File>> imgList = new ArrayList<List<File>>();
-
+        System.out.println(imgFiles.length);
         makeFolder(DESTINATION_FOLDER);
 
         int idx = 0;
